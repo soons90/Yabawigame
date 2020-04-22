@@ -1,11 +1,3 @@
-﻿/*
- * I2C_LCD.h
- *
- * Created: 2019-10-15 오전 9:48:50
- *  Author: haya1
- */ 
-
-
 #ifndef I2C_LCD_H_
 #define I2C_LCD_H_
 
