@@ -1,11 +1,3 @@
-﻿/*
- * FND.h
- *
- * Created: 2020-03-30 오후 10:07:04
- *  Author: 984
- */ 
-
-
 #ifndef FND_H_
 #define FND_H_
 
