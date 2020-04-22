@@ -1,11 +1,3 @@
-﻿/*
- * Speaker.h
- *
- * Created: 2019-05-01 오후 4:04:01
- *  Author: 정경윤
- */ 
-
-
 #ifndef SPEAKER_H_
 #define SPEAKER_H_
 
