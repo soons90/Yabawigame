@@ -1,10 +1,3 @@
-﻿/*
- * speaker.c
- *
- * Created: 2019-09-20 오후 12:52:31
- *  Author: 정경윤
- */ 
-
 #include <avr/io.h>
 #define F_CPU 16000000UL
 #include <util/delay.h>
