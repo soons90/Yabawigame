@@ -1,11 +1,3 @@
-﻿/*
- * timer.h
- *
- * Created: 2019-09-20 오후 12:58:23
- *  Author: 정경윤
- */ 
-
-
 #ifndef TIMER_H_
 #define TIMER_H_
 
