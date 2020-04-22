@@ -1,9 +1,3 @@
-﻿/*
- * timer.c
- *
- * Created: 2019-09-19 오전 11:38:44
- *  Author: 정경윤
- */ 
 #include <avr/io.h>
 #define F_CPU 16000000L
 #include <util/delay.h>
@@ -14,11 +8,6 @@
 extern volatile char FND_font[10];
 extern volatile char FND_digit[4];
 extern volatile char FND[4];
-
-//extern volatile char SFND_font[10];
-//extern volatile char SFND_digit[4];
-//extern volatile char SFND[4];
-
 
 ISR(TIMER0_COMPA_vect){
 	if(sw_start_flag)sw_msec++;
@@ -48,26 +37,11 @@ ISR(TIMER0_COMPA_vect){
 			}
 		}
 	}
-	//if(msec%100 == 0)time_print_flag = 1;
-	
- 	/*FND4digit_com_PORT |= 0b00111100;
- 	FND4digit_data_PORT = FND[msec%4];
- 	FND4digit_com_PORT &= FND_digit[msec%4];*/
-	
-	/*SHIFT_REGISTER_FND_COM_PORT |= 1 << DIGIT_1 | 1 << DIGIT_10 |1 << DIGIT_100 |1 << DIGIT_1000;
-	shift_register_send_byte(SFND[msec%4]);
-	SHIFT_REGISTER_FND_COM_PORT &= SFND_digit[msec%4];  */
 }
 
 void timer_main(void){
 	char up_down_flag = 1;
-	//FND4digit_init();
-	//timer0_compA_msec_int_init();
-	//timer1_fast_PWM_init();
-	//timer1_fast_PWM_survo_motor_init();
-	//timer2_fast_PWM_init();
 	sei();
-	//TCNT1 = TCNT2;
 	OCR2B = 1;
 	OCR1A = 30;
 	while(1){
@@ -76,28 +50,6 @@ void timer_main(void){
 		if(OCR1A >= 170){
 			OCR1A = 30;
 		}
-		/*if(time_print_flag){
-			time_print_flag = 0;
-			FND_update_time(min, sec, msec);
-		}*/
-		/*if(up_down_flag){
-			OCR2B++;
-			if(OCR2B >= 150)up_down_flag = 0;
-		}
-		else {
-			OCR2B--;
-			if(OCR2B <= 1)up_down_flag = 1;
-		}*/
-		/*OCR1A += 1;
-		if(OCR1A >= 160)OCR1A = 30;
-		OCR1B += 2;
-		if(OCR1B >= 160)OCR1B = 30;
-		OCR2A += 1;
-		if(OCR2A >= 160){
-			OCR2A = 30;
-			TCNT2 = 0;
-		}*/
-		//FND_update(OCR1A);
 		_delay_ms(50);
 	}
 }
