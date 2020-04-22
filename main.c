@@ -1,9 +1,3 @@
-/*
- * jjanggaembbo.c
- *
- * Created: 2020-04-06 오전 12:08:47
- * Author : 안순남
- */ 
 #define F_CPU 16000000UL
 #include <avr/io.h>
 #include <util/delay.h>
